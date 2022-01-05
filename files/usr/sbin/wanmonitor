@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# Copyright(C) 2022, Gérald Kerma <gandalf@gk2.net>
 # Copyright(C) 2018, Rafal Kupiec <belliash@codingworkshop.eu.org>
 
 source /lib/functions/network.sh
@@ -138,6 +139,10 @@ while true; do
 				/sbin/route add default gw ${GATEWAY_WAN_SECONDARY} metric ${WAN_SECONDARY_METRIC:-0} ${IFNAME_WAN_SECONDARY} &>/dev/null
 			fi
 			WAN=2
+# Primary WAN down : reconnect (auto)
+			ifdown ${WAN_PRIMARY}
+			ifup ${WAN_PRIMARY}
+                        /usr/bin/logger -t $0 -p ${LOGGER_ALERT} "Primary WAN Interface is DOWN! Reconnecting ${WAN_PRIMARY}."
 		fi
 	else
 		if [ "${WAN}" = "0" ] || [ "${WAN}" = "2" ]; then
