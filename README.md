@@ -13,6 +13,7 @@ This refreshed version from 2022 add auto reconnect of Primary wan, when
 network connection is lost.
 
 Original version of 2018 from: Rafal Kupiec <belliash@codingworkshop.eu.org>
+
 Refreshed version of 2002 from: Gérald Kerma <gandalf@gk2.net>
 
 The WanMonitor provides the following capabilities:
