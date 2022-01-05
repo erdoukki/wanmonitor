@@ -1,0 +1,12 @@
+#!/bin/sh
+# Copyright 2022 Gérald Kerma
+
+[ -n "$INTERFACE" ] || exit 0
+
+[ "$ACTION" = ifup ] && {
+    /etc/init.d/wanmonitor restart
+}
+
+[ "$ACTION" = ifdown ] && {
+##    /etc/init.d/wanmonitor stop
+}
