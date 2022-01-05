@@ -4,6 +4,12 @@
 [ -n "$INTERFACE" ] || exit 0
 
 [ "$ACTION" = ifup ] && {
+    if ! /etc/init.d/wanmonitor enabled || [ "$(uci get "wanmonitor.@wanmonitor[0].wan_primary")" != "$INTERFACE" ]; then
+        exit 0
+    fi
+
+    logger -t wanmonitor "Starting wanmonitor due to $ACTION of $INTERFACE ($DEVICE)"
+
     /etc/init.d/wanmonitor restart
 }
 

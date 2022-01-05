@@ -1,7 +1,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=wanmonitor
-PKG_RELEASE:=20180424
+PKG_RELEASE:=20220105
 
 PKG_BUILD_DIR := $(BUILD_DIR)/$(PKG_NAME)
 
@@ -11,7 +11,7 @@ define Package/wanmonitor
 	SECTION:=net
 	CATEGORY:=Network
 	TITLE:=WAN Monitor & Failover Connection Manager
-	MAINTAINER:=Rafal Kupiec <belliash@codingworkshop.eu.org>
+	MAINTAINER:=Gerald Kerma <gandalf@gk2.net>
 	PKGARCH:=all
 endef
 
