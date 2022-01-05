@@ -1,4 +1,9 @@
-# Archived: Project has been moved to [CodingWorkshop](https://git.codingworkshop.eu.org/)!
+# 2022 UPDATE
+
+Quick FIX, autoreconnect Primary Wan when interface came down.
+
+# Original
+Archived: Project has been moved to [CodingWorkshop](https://git.codingworkshop.eu.org/)!
 
 This repository will probably NOT be updated anymore.
 Check [CodingWorkshop GIT](https://git.codingworkshop.eu.org/belliash/wanmonitor) for up-to-date version and other projects.
