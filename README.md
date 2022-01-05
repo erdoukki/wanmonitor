@@ -2,19 +2,18 @@
 
 Quick FIX, autoreconnect Primary Wan when interface came down.
 
-# Original
-Archived: Project has been moved to [CodingWorkshop](https://git.codingworkshop.eu.org/)!
-
-This repository will probably NOT be updated anymore.
-Check [CodingWorkshop GIT](https://git.codingworkshop.eu.org/belliash/wanmonitor) for up-to-date version and other projects.
-
-
 # WAN Monitor &amp; Failover Connection Manager
 
 The wanmonitor package is an agent script that makes Multi-WAN configuration simple,
 easy to use and manageable. It comes complete with failover setup supporting many
 types of internet connections, including PPPoE and mobile connections. The uci
 configuration file /etc/config/wanmonitor is provided as part of the wanmonitorpackage.
+
+This refreshed version from 2022 add auto reconnect of Primary wan, when 
+network connection is lost.
+
+Original version of 2018 from: Rafal Kupiec <belliash@codingworkshop.eu.org>
+Refreshed version of 2002 from: Gérald Kerma <gandalf@gk2.net>
 
 The WanMonitor provides the following capabilities:
 * provides outbound WAN traffic failover connection setup
@@ -67,3 +66,10 @@ save mobile traffic).
         option sleep '5'
         option wan_primary 'wan1'
         option wan_secondary 'wan2'</pre>
+
+
+# Original
+Archived: Project has been moved to [CodingWorkshop](https://git.codingworkshop.eu.org/)!
+
+This repository will probably NOT be updated anymore.
+Check [CodingWorkshop GIT](https://git.codingworkshop.eu.org/belliash/wanmonitor) for up-to-date version and other projects.
