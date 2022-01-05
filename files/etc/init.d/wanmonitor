@@ -7,5 +7,5 @@ start() {
 }
 
 stop() {
-	kill $(pidof wanmonitor)
+	kill -9 `pgrep -f /usr/sbin/wanmonitor`
 }
